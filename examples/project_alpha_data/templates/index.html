@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - {{ config.get('site_title', 'My Static Site') }}</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Site Index</h1>
+        </header>
+        <main>
+            <ul class="index-list">
+                {% for page in pages %}
+                <li><a href="{{ page.filename }}">{{ page.title }}</a></li>
+                {% else %}
+                <li>No pages found.</li>
+                {% endfor %}
+            </ul>
+        </main>
+        <footer>
+            <p>&copy; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

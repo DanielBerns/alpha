@@ -1,0 +1,6 @@
+site_title: Demo Alpha
+directories:
+  pages: pages
+  resources: resources
+  assets: assets
+  templates: templates
