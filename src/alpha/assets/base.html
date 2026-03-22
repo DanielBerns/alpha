@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}{{ config.get('site_title', 'My Static Site') }}</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../assets/w3.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>{% if title %}{{ title }}{% else %}{{ config.get('site_title', 'My Static Site') }}{% endif %}</h1>
-            <nav><a href="index.html">← Back to Index</a></nav>
-        </header>
-        <main>
-            {{ content }}
-        </main>
-        <footer>
-            <p>&copy; 2026</p>
-        </footer>
+    <div class="w3-bar w3-black">
+        <a href="../index.html" class="w3-bar-item w3-button">Home</a>
     </div>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="w3-container w3-padding-16 w3-light-grey w3-center">
+        <p>&copy; 2026 {{ author }}</p>
+    </footer>
 </body>
 </html>

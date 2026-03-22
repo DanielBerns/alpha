@@ -1,24 +1,111 @@
-body {
-    font-family: sans-serif;
+/* style.css - W3.CSS Companion for Markdown Content */
+
+/* Center the main content and constrain the width for readability */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* Headings: Match W3.CSS default typography (Segoe UI) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    color: #000;
+    margin: 24px 0 16px 0;
+}
+h1 { font-size: 36px; }
+h2 {
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-top: 32px;
+}
+h3 { font-size: 24px; }
+
+/* Text & Lists: Match W3.CSS default body font (Verdana) */
+p, ul, ol {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    padding: 20px;
+    margin-bottom: 16px;
 }
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ul, ol {
+    padding-left: 32px;
 }
+li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+a {
+    color: #2196F3; /* w3-text-blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #0b7dda;
+}
+
+/* Blockquotes: Mimic 'w3-panel w3-leftbar w3-light-grey' */
+blockquote {
+    margin: 20px 0;
+    padding: 16px 24px;
+    background-color: #f1f1f1;
+    border-left: 5px solid #ccc;
+    font-style: italic;
+}
+
+/* Inline Code: Mimic 'w3-codespan' */
+code {
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px 6px;
+    font-size: 105%;
+    font-family: Consolas, "courier new", monospace;
+    border-radius: 3px;
+}
+
+/* Preformatted Code Blocks: Mimic 'w3-code' with a left border */
+pre {
+    background-color: #f1f1f1;
+    border-left: 4px solid #4CAF50; /* w3-green */
+    padding: 16px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+pre code {
+    color: #000;
+    background-color: transparent;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Images */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+    margin: 24px 0;
+    display: block;
 }
-audio {
+
+/* Tables: Mimic 'w3-table-all' */
+table {
+    border-collapse: collapse;
     width: 100%;
-    margin-top: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+th, td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+th {
+    background-color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
