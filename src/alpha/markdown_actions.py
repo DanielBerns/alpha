@@ -112,7 +112,7 @@ def markdown_to_spec(input_path: Path, output_dir: Path) -> None:
     print(f"\nProcessing complete! Content generated on the appropriate branch in: {output_dir}")
 
 
-def generate_media_markdown(target_dir: Path, output_file: Path, prefix: str, title: str) -> None:
+def generate_markdown_gallery(target_dir: Path, output_file: Path, prefix: str, title: str) -> None:
     if not target_dir.exists() or not target_dir.is_dir():
         print(f"Error: Directory '{target_dir}' does not exist or is not a directory.")
         return

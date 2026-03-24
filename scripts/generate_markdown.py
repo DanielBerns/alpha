@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from alpha.media_markdown import generate_media_markdown
+from alpha.markdown_actions import generate_markdown_gallery
 
 
 def main() -> None:
@@ -30,7 +30,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    generate_media_markdown(
+    generate_markdown_gallery(
         target_dir=Path(args.directory).resolve(),
         output_file=Path(args.output).resolve(),
         prefix=args.prefix,
