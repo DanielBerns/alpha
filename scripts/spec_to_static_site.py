@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from alpha.static_site import init_project, build_site
+from alpha.static_site_actions import init_project, build_site
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a static site from Markdown and assets.")
@@ -28,11 +28,10 @@ def main() -> None:
     else:
         if not args.config or not args.output:
             parser.error("The following arguments are required to build a site: -c/--config and -o/--output")
-
-        config_file_path = Path(args.config).resolve()
-        output_dir_path = Path(args.output).resolve()
-
-        build_site(config_file_path, output_dir_path)
+        else:
+            config_file_path = Path(args.config).resolve()
+            output_dir_path = Path(args.output).resolve()
+            build_site(config_file_path, output_dir_path)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,3 @@
-import argparse
 import mimetypes
 from pathlib import Path
 
